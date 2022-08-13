@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Onboarding1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:id="@+id/animate"
+            android:layout_marginTop="0dp"
+            app:lottie_rawRes="@raw/social_anim"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"/>
+
+        <TextView
+            android:id="@+id/headertxt"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="400dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_vertical"
+            android:text="Gamified Fitness"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/brieftxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headertxt"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:text="Engage yourself with FitJoy's gamified fitness version. "
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+
+
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>
