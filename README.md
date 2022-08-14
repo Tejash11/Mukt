@@ -1,1 +1,1 @@
-Mukt is an Nasha Muskt Bharat Abhiyan App in the making.
+Mukt is a Nasha Muskt Bharat Abhiyan App in the making.
