@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".signup_login.LogIn">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/posts_anim" />
+
+    <TextView
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:text="Welcome to Mukt"
+        android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="User id"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter your User id"
+        android:layout_marginLeft="18dp"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:id="@+id/login_userid"
+        android:background="@drawable/circular_background_blackline"
+        android:layout_marginRight="18dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/login_pwd"
+        android:hint="Enter your Password"
+        android:layout_marginLeft="18dp"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:inputType="textPassword"
+        android:background="@drawable/circular_background_blackline"
+        android:layout_marginRight="18dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="12sp"
+            android:id="@+id/checkin_login"
+            android:text="Remember Password"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="Log In "
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:id="@+id/login_btn"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:background="@drawable/blue_circular_solid"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="or Sign Up Now!"
+        android:id="@+id/signup_btn"
+        android:textSize="16sp"
+        android:fontFamily="@font/poppins_semibold"/>
+
+
+
+</LinearLayout>

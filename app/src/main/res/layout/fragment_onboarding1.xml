@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Onboarding1">
+    tools:context=".onboarding_splash.Onboarding1">
 
     <RelativeLayout
         android:layout_width="match_parent"

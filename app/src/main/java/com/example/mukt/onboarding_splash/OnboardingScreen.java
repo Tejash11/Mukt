@@ -1,4 +1,4 @@
-package com.example.mukt;
+package com.example.mukt.onboarding_splash;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -10,6 +10,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import com.example.mukt.R;
+import com.example.mukt.signup_login.SignUp;
 
 public class OnboardingScreen extends AppCompatActivity {
     LinearLayout getstartedbtn;
@@ -149,7 +152,8 @@ public class OnboardingScreen extends AppCompatActivity {
         getstartedbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(OnboardingScreen.this,MainActivity.class);
+                Intent i = new Intent(OnboardingScreen.this, SignUp.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(i);
             }
         });

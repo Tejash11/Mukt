@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".signup_onboarding.SelectInterest">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:src="@drawable/back_arrow"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Select your Interests"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:id="@+id/music_select"
+            android:layout_weight="1"
+            android:background="@drawable/circular_background_blackline"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/music"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Music"
+                android:layout_weight="3"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:id="@+id/food_select"
+            android:background="@drawable/circular_background_blackline"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/hamburger"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Food"
+                android:layout_weight="3"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:id="@+id/tech_select"
+            android:background="@drawable/circular_background_blackline"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/tech"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Technology"
+                android:layout_weight="3"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:id="@+id/art_select"
+            android:background="@drawable/circular_background_blackline"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/paint"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Art"
+                android:layout_weight="3"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:id="@+id/fitness_select"
+            android:background="@drawable/circular_background_blackline"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/dumbell"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Fitness"
+                android:layout_weight="3"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:id="@+id/sports_select"
+            android:background="@drawable/circular_background_blackline"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/trophy"
+                android:padding="10dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Sports"
+                android:layout_weight="3"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="Next"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:id="@+id/next_btn"
+        android:layout_marginTop="30dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_semibold"
+        android:background="@drawable/blue_circular_solid"/>
+
+
+</LinearLayout>
