@@ -71,13 +71,6 @@
                 android:layout_margin="10dp"
                 android:src="@drawable/onboarding_markoutline" />
 
-            <ImageView
-                android:id="@+id/mark4"
-                android:layout_width="15dp"
-                android:layout_height="15dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/onboarding_markoutline" />
-
 
             <ImageView
                 android:id="@+id/nextbtn"
@@ -96,7 +89,6 @@
             android:layout_width="320dp"
             android:layout_height="35dp"
             android:layout_below="@+id/pages"
-
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="20dp"
             android:background="@drawable/get_started"

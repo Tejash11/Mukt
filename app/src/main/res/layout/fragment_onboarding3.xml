@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".onboarding_splash.Onboarding1">
+    tools:context=".onboarding_splash.Onboarding3">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:layout_height="400dp"
             android:id="@+id/animate"
             android:layout_marginTop="0dp"
-            app:lottie_rawRes="@raw/social_anim"
+            app:lottie_rawRes="@raw/recruitment"
             app:lottie_autoPlay="true"
             app:lottie_loop="true"/>
 
@@ -27,7 +27,7 @@
             android:layout_marginTop="400dp"
             android:fontFamily="@font/poppins_semibold"
             android:gravity="center_vertical"
-            android:text="Youth Engagement"
+            android:text="Easy Recruitment Process"
             android:textColor="@color/black"
             android:textSize="25sp"
             android:textStyle="bold" />
@@ -40,7 +40,7 @@
             android:layout_marginLeft="20dp"
             android:fontFamily="@font/poppins"
             android:gravity="center_vertical"
-            android:text="Engage yourself with Mukt's volunteers to learn more. "
+            android:text="Engage yourself with the youth by volunteering them.. "
             android:textColor="@color/black"
             android:textSize="20sp" />
 

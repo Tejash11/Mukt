@@ -12,12 +12,13 @@
         android:layout_marginTop="100dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/posts_anim" />
+        app:lottie_rawRes="@raw/m"
+         />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="450dp"
         android:fontFamily="@font/overlock_sc"
         android:gravity="center"
         android:text="Mukt"

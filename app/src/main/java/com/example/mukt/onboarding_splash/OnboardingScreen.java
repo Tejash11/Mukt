@@ -32,7 +32,7 @@ public class OnboardingScreen extends AppCompatActivity {
         mark1 = (ImageView) findViewById(R.id.mark1);
         mark2 = (ImageView) findViewById(R.id.mark2);
         mark3 = (ImageView) findViewById(R.id.mark3);
-        mark4 = (ImageView) findViewById(R.id.mark4);
+//        mark4 = (ImageView) findViewById(R.id.mark4);
 
 
 
@@ -61,27 +61,27 @@ public class OnboardingScreen extends AppCompatActivity {
                     t.commit();
                     count = 2;
 
+                    mark1.setImageResource(R.drawable.onboarding_mark);
                     mark2.setImageResource(R.drawable.onboarding_mark);
                     mark3.setImageResource(R.drawable.onboarding_markoutline);
-                    mark4.setImageResource(R.drawable.onboarding_markoutline);
 
 
 
                 }
-//                else if(count == 2)
-//                {
-//                    FragmentManager m = getSupportFragmentManager();
-//                    FragmentTransaction t = m.beginTransaction();
-//                    Fragment Home = new Onboarding3();
-//                    t.replace(R.id.onboard_frag, Home);
-//                    t.commit();
-//                    count = 3;
-//
-//                    mark2.setImageResource(R.drawable.onboarding_mark);
-//                    mark3.setImageResource(R.drawable.onboarding_mark);
-//                    mark4.setImageResource(R.drawable.onboarding_markoutline);
-//
-//                }
+                else if(count == 2)
+                {
+                    FragmentManager m = getSupportFragmentManager();
+                    FragmentTransaction t = m.beginTransaction();
+                    Fragment Home = new Onboarding3();
+                    t.replace(R.id.onboard_frag, Home);
+                    t.commit();
+                    count = 3;
+
+                    mark1.setImageResource(R.drawable.onboarding_mark);
+                    mark2.setImageResource(R.drawable.onboarding_mark);
+                    mark3.setImageResource(R.drawable.onboarding_mark);
+
+                }
 //                else if(count == 3)
 //                {
 //                    FragmentManager m = getSupportFragmentManager();
@@ -111,37 +111,44 @@ public class OnboardingScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(count == 1)
-                {
-
-                }
-                else if(count == 2)
-                {
+                if (count == 3) {
                     FragmentManager m = getSupportFragmentManager();
                     FragmentTransaction t = m.beginTransaction();
                     Fragment Home = new Onboarding2();
+                    t.replace(R.id.onboard_frag, Home);
+                    t.commit();
+
+                    count = 2;
+
+                    mark1.setImageResource(R.drawable.onboarding_mark);
+                    mark2.setImageResource(R.drawable.onboarding_mark);
+                    mark3.setImageResource(R.drawable.onboarding_markoutline);
+                } else if (count == 2) {
+                    FragmentManager m = getSupportFragmentManager();
+                    FragmentTransaction t = m.beginTransaction();
+                    Fragment Home = new Onboarding1();
                     t.replace(R.id.onboard_frag, Home);
                     t.commit();
 
                     count = 1;
 
+                    mark1.setImageResource(R.drawable.onboarding_mark);
                     mark2.setImageResource(R.drawable.onboarding_markoutline);
                     mark3.setImageResource(R.drawable.onboarding_markoutline);
-                    mark4.setImageResource(R.drawable.onboarding_markoutline);
                 }
-                else if(count == 3)
-                {
-                    FragmentManager m = getSupportFragmentManager();
-                    FragmentTransaction t = m.beginTransaction();
-                    Fragment Home = new Onboarding2();
-                    t.replace(R.id.onboard_frag, Home);
-                    t.commit();
-                    count = 2;
-
-                    mark2.setImageResource(R.drawable.onboarding_mark);
-                    mark3.setImageResource(R.drawable.onboarding_markoutline);
-                    mark4.setImageResource(R.drawable.onboarding_markoutline);
-                }
+//                else if(count == 3)
+//                {
+//                    FragmentManager m = getSupportFragmentManager();
+//                    FragmentTransaction t = m.beginTransaction();
+//                    Fragment Home = new Onboarding2();
+//                    t.replace(R.id.onboard_frag, Home);
+//                    t.commit();
+//                    count = 2;
+//
+//                    mark2.setImageResource(R.drawable.onboarding_mark);
+//                    mark3.setImageResource(R.drawable.onboarding_markoutline);
+//                    mark4.setImageResource(R.drawable.onboarding_markoutline);
+//            }
 
 
             }

@@ -20,17 +20,17 @@
             app:lottie_loop="true"/>
 
         <TextView
+            android:id="@+id/headertxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="400dp"
             android:fontFamily="@font/poppins_semibold"
             android:gravity="center_vertical"
-            android:text="Train with Correct Posture"
-            android:textStyle="bold"
-            android:id="@+id/headertxt"
-            android:layout_marginTop="400dp"
+            android:text="Events Participation"
             android:textColor="@color/black"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/brieftxt"
@@ -40,7 +40,7 @@
             android:layout_marginLeft="20dp"
             android:fontFamily="@font/poppins"
             android:gravity="center_vertical"
-            android:text="Body Posture's has a vital role to hinder your injuries and to target your muscles more effeciently"
+            android:text="Virtual Tour to Events alongwith a optimised interface to conduct online/offline events."
             android:textColor="@color/black"
             android:textSize="17sp"
             />
