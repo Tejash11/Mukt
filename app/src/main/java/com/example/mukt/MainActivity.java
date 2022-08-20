@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView bazaarbtn = (ImageView) findViewById(R.id.shopbtn);
         ImageView communitybtn = (ImageView) findViewById(R.id.commbtn);
         ImageView userbtn = (ImageView) findViewById(R.id.userbtn);
-        FloatingActionButton dumbbellbtn = (FloatingActionButton) findViewById(R.id.dumbbellbtn);
+        FloatingActionButton muktbtn = (FloatingActionButton) findViewById(R.id.muktbtn);
 
         FragmentManager m = getSupportFragmentManager();
         FragmentTransaction t = m.beginTransaction();
@@ -92,16 +92,16 @@ public class MainActivity extends AppCompatActivity {
 //            }
 //        });
 //
-//        dumbbellbtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent i = new Intent(MainActivity.this,FitnessReels.class);
-//                startActivity(i);
-//                homebtn.setImageResource(R.drawable.homeoutline);
+        muktbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,Mukt_reels.class);
+                startActivity(i);
+                homebtn.setImageResource(R.drawable.homeoutline);
 //                bazaarbtn.setImageResource(R.drawable.shopoutline);
 //                communitybtn.setImageResource(R.drawable.heart);
-//                userbtn.setImageResource(R.drawable.useroutline);
-//            }
-//        });
+                userbtn.setImageResource(R.drawable.useroutline);
+            }
+        });
     }
 }
