@@ -108,14 +108,14 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="@color/primary_blue"
         android:src="@drawable/vec_chatbot_floating_logo"
         app:tint="@color/white"
-        android:backgroundTint="@color/primary_blue"
-        tools:ignore="SpeakableTextPresentCheck"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="60dp"/>
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </RelativeLayout>
 
