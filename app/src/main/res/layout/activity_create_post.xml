@@ -7,9 +7,10 @@
     android:layout_height="match_parent"
     tools:context=".CreatePost">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
         android:orientation="vertical">
 
         <LinearLayout
@@ -40,73 +41,79 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/author_panel"
+            android:layout_below="@id/socio_heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:src="@drawable/mukt_icon"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp" />
+
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="center"
-                    android:layout_margin="12dp"
-                    android:src="@drawable/mukt_icon"
-                    app:civ_border_color="#FF000000"
-                    app:civ_border_width="2dp" />
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/author_posts"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Soumen Paul"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:id="@+id/author_posts"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:fontFamily="@font/poppins_semibold"
-                        android:text="Soumen Paul"
-                        android:textColor="@color/black"
-                        android:textSize="14sp"
-                        android:textStyle="bold" />
-
-
-                </LinearLayout>
 
             </LinearLayout>
+
+        </LinearLayout>
 
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="680dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/author_panel"
+            android:layout_above="@id/post_hashtag"
             android:scrollbars="vertical">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-            <EditText
-                android:id="@+id/post_caption"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:hint="Write your caption here"
-                android:textSize="18sp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="10dp"
-                android:background="@null"/>
+
+                <EditText
+                    android:id="@+id/post_caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:hint="Write your caption here"
+                    android:textSize="18sp" />
 
                 <ImageView
                     android:id="@+id/post_imageview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="30dp"
-                    />
+                    android:layout_marginHorizontal="30dp" />
             </LinearLayout>
         </ScrollView>
 
         <TextView
+            android:layout_above="@id/post_panel"
             android:id="@+id/post_hashtag"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -119,9 +126,11 @@
             android:textStyle="bold" />
 
         <LinearLayout
+            android:id="@+id/post_panel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
             android:layout_marginTop="5dp"
             android:layout_marginLeft="5dp">
 
@@ -172,6 +181,6 @@
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/transferbg"/>
         </LinearLayout>
-    </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
