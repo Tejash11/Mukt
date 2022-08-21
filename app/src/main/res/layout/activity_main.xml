@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <androidx.coordinatorlayout.widget.CoordinatorLayout
 =======
 <RelativeLayout
 >>>>>>> 503f9fb (Implemented ChatBot(Mukti) Currently Offline)
+=======
+<RelativeLayout
+>>>>>>> master
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -122,5 +126,9 @@
         android:layout_marginRight="40dp"
         android:layout_marginBottom="60dp"/>
 
+<<<<<<< HEAD
 </RelativeLayout>
 >>>>>>> 503f9fb (Implemented ChatBot(Mukti) Currently Offline)
+=======
+</RelativeLayout>
+>>>>>>> master

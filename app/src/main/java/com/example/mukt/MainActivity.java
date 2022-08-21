@@ -1,7 +1,6 @@
 package com.example.mukt;
 
 import androidx.appcompat.app.AppCompatActivity;
-<<<<<<< HEAD
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -12,7 +11,12 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-=======
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.app.Dialog;
+import android.os.Bundle;
+import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,7 +28,6 @@ import android.view.ViewGroup;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
->>>>>>> 503f9fb (Implemented ChatBot(Mukti) Currently Offline)
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-<<<<<<< HEAD
         ImageView homebtn = (ImageView) findViewById(R.id.homebtn);
         ImageView bazaarbtn = (ImageView) findViewById(R.id.shopbtn);
         ImageView communitybtn = (ImageView) findViewById(R.id.commbtn);
@@ -122,7 +124,6 @@ public class MainActivity extends AppCompatActivity {
                 userbtn.setImageResource(R.drawable.useroutline);
             }
         });
-=======
         dlg = new Dialog(MainActivity.this);
         dlg.setContentView(R.layout.dialog_chatbot);
         dlg.getWindow().setBackgroundDrawable(getDrawable(R.drawable.background_dialog));
@@ -163,8 +164,6 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(messagesRecyclerAdapter);
-
-
->>>>>>> 503f9fb (Implemented ChatBot(Mukti) Currently Offline)
+        
     }
 }

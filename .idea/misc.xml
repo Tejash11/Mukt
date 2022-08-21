@@ -15,8 +15,11 @@
         <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/fragment_onboarding1.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/fragment_onboarding2.xml" value="0.16666666666666666" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/post_layout.xml" value="0.14666666666666667" />
 =======
+=======
+>>>>>>> master
         <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/drawable/background_dialog.xml" value="0.112" />
         <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/drawable/button_outlined.xml" value="0.1775" />
         <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/drawable/button_outlined_blue.xml" value="0.2315" />
@@ -32,7 +35,10 @@
         <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/layout/dialog_message_chatbot.xml" value="0.2" />
         <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/layout/fragment_onboarding1.xml" value="0.1" />
         <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/layout/fragment_onboarding2.xml" value="0.1" />
+<<<<<<< HEAD
 >>>>>>> 503f9fb (Implemented ChatBot(Mukti) Currently Offline)
+=======
+>>>>>>> master
       </map>
     </option>
   </component>
