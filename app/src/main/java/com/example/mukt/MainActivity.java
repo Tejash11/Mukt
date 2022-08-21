@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
         muktbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MainActivity.this,Mukt_reels.class);
+                Intent i = new Intent(MainActivity.this,CreatePost.class);
                 startActivity(i);
                 homebtn.setImageResource(R.drawable.homeoutline);
 //                bazaarbtn.setImageResource(R.drawable.shopoutline);
