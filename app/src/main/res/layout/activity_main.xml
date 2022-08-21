@@ -92,11 +92,11 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:layout_width="wrap_content"
-            android:id="@+id/muktbtn"
+            android:id="@+id/creatpostbtn"
             android:layout_height="wrap_content"
             app:layout_anchor="@id/navigation_bar"
             android:backgroundTint="@color/white"
-            android:src="@drawable/video"
+            android:src="@drawable/add"
             android:scaleType="center"
             app:maxImageSize="35dp"
             android:contentDescription="TODO" />
