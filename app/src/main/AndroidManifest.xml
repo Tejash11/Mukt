@@ -12,9 +12,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVI" />
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,21 +20,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mukt">
         <activity
-            android:name=".event_section.event_view"
-            android:exported="false" />
+            android:name=".activity_applications" />
         <activity
-            android:name=".event_section.event_create"/>
-<!--       <activity-->
-<!--            android:name=".FeaturedActivity"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".AddJobActivity"-->
-<!--            android:exported="false" />-->
-        <activity android:name=".activity_applications" />
-        <activity android:name=".Notification" />
+            android:name=".Notification" />
         <activity
             android:name=".Mukt_reels"
-
             android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
@@ -73,20 +60,6 @@
         <activity
             android:name=".onboarding_splash.SplashScreen"
             android:exported="true">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
-        <activity
-            android:name=".CreatePost"
-            android:exported="true"></activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -94,6 +67,21 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".CreatePost"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"
