@@ -24,22 +24,34 @@
             android:src="@drawable/back_arrow" />
 
         <ImageView
-            android:id="@+id/searchbutton"
-            android:layout_marginTop="50dp"
-            android:layout_toLeftOf="@id/optionsbutton"
+            android:id="@+id/addbutton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/searchbutton"
+            android:adjustViewBounds="true"
+            android:scaleX="1.3"
+            android:scaleY="1.3"
+            android:src="@drawable/vec_plus" />
+
+        <ImageView
+            android:id="@+id/searchbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/optionsbutton"
             android:adjustViewBounds="true"
             android:src="@drawable/vec_search" />
 
         <ImageView
             android:id="@+id/optionsbutton"
-            android:layout_marginTop="50dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
             android:layout_alignParentRight="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
             android:adjustViewBounds="true"
             android:src="@drawable/vec_options" />
 
@@ -54,178 +66,82 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="20dp"
-                android:id="@+id/Volunteer_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Volunteer"
-                android:fontFamily="@font/poppins_semibold"
-                android:textSize="30sp"
-                android:textColor="@color/primary_blue"/>
-
-            <TextView
-                android:id="@+id/nmba_text"
-                android:layout_marginTop="-15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_below="@id/Volunteer_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="for Nasha Mukt Bharat Abhiyaan"
-                android:fontFamily="@font/poppins_semibold"
-                android:textSize="25sp"
-                android:textColor="@color/black"/>
-
-            <View
-                android:layout_width="15dp"
-                android:layout_height="100dp"
-                android:background="@color/primary_blue"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="35dp"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginLeft="10dp"
-                android:id="@+id/application_recycler1"
+            <RelativeLayout
+                android:id="@+id/sub_panel"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/nmba_text"
-                android:layout_marginTop="20dp" />
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/getrole_text"
-                android:layout_marginLeft="10dp"
-                android:layout_below="@id/application_recycler1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Get a"
-                android:fontFamily="@font/poppins_semibold"
-                android:textSize="25sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="10dp"/>
+                <TextView
+                    android:id="@+id/Volunteer_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Volunteer"
+                    android:textColor="@color/primary_blue"
+                    android:textSize="30sp" />
 
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_toRightOf="@id/getrole_text"
-                android:layout_below="@id/application_recycler1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="role"
-                android:layout_marginLeft="7dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:textSize="25sp"
-                android:textColor="@color/primary_blue"/>
+                <TextView
+                    android:id="@+id/nmba_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Volunteer_text"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="-12dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="for Nasha Mukt Bharat Abhiyaan"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginHorizontal="10dp"
-                android:orientation="vertical"
-                android:id="@+id/application_recycler2"
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="35dp"
+                    android:background="@color/primary_blue" />
+            </RelativeLayout>
+
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/Frag_container"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/getrole_text" />
+                android:layout_height="match_parent"
+                android:layout_below="@id/sub_panel" />
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/viewmore_card"
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_below="@id/application_recycler2"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginHorizontal="15dp"
-                android:layout_marginVertical="5dp"
-                android:background="#00FFFFFF"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="2dp"
-                xmlns:app="http://schemas.android.com/apk/res-auto">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/primary_blue">
-
-                        <TextView
-                            android:layout_centerInParent="true"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/poppins_medium"
-                            android:text="View 34 more"
-                            android:textSize="17sp"
-                            android:textColor="@color/white" />
-                </RelativeLayout>
-
-
-            </androidx.cardview.widget.CardView>
-
-            <TextView
-                android:id="@+id/completetask"
-                android:layout_marginLeft="10dp"
-                android:layout_below="@id/viewmore_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Complete"
-                android:fontFamily="@font/poppins_semibold"
-                android:textSize="25sp"
-                android:textColor="@color/black"
-                android:layout_marginTop="10dp"/>
-
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_toRightOf="@id/completetask"
-                android:layout_below="@id/viewmore_card"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="tasks"
-                android:layout_marginLeft="7dp"
-                android:fontFamily="@font/poppins_semibold"
-                android:textSize="25sp"
-                android:textColor="@color/primary_blue"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_marginHorizontal="10dp"
-                android:orientation="vertical"
-                android:id="@+id/application_recycler3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/completetask" />
-
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/viewmore_task_card"
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_below="@id/application_recycler3"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_marginHorizontal="15dp"
-                android:layout_marginVertical="5dp"
-                android:background="#00FFFFFF"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="2dp"
-                xmlns:app="http://schemas.android.com/apk/res-auto">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/primary_blue">
-
-                    <TextView
-                        android:layout_centerInParent="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_medium"
-                        android:text="View 50 more"
-                        android:textSize="17sp"
-                        android:textColor="@color/white" />
-                </RelativeLayout>
-
-
-            </androidx.cardview.widget.CardView>
 
         </RelativeLayout>
 
 
-
     </ScrollView>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/apply"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="70dp"
+        android:layout_marginBottom="20dp"
+        android:background="#00FFFFFF"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="2dp"
+        android:layout_alignParentBottom="true">
 
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/primary_blue"
+            android:elevation="10dp">
+
+            <TextView
+                android:layout_centerInParent="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:text="APPLY"
+                android:textSize="17sp"
+                android:textColor="@color/white" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
 
 
