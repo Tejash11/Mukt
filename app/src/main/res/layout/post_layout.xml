@@ -47,6 +47,16 @@
                     android:textSize="14sp"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:id="@+id/date_posts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Soumen Paul"
+                    android:textColor="@color/black"
+                    android:textSize="10dp"
+                    android:textStyle="bold" />
+
             </LinearLayout>
 
             <TextView
@@ -63,7 +73,6 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/posted_img"
-        app:cardElevation="3dp"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         android:layout_below="@+id/feed1_person">
@@ -80,8 +89,7 @@
         android:id="@+id/react_emoticons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/posted_img"
-        android:layout_marginTop="4dp">
+        android:layout_below="@+id/posted_img">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -192,11 +200,24 @@
         android:id="@+id/caption_posts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="@font/poppins_semibold"
         android:text="Soumen Paul"
         android:textColor="@color/black"
         android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/time_posts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Soumen Paul"
+        android:textColor="@color/black"
+        android:textSize="10dp"
         android:textStyle="bold" />
 
 

@@ -3,42 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/drawable-v24/blueoutline.xml" value="0.1215" />
+        <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/drawable-v24/cardoutline.xml" value="0.1215" />
+        <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/drawable-v24/energybluegradient.xml" value="0.1215" />
         <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/drawable-v24/get_started.xml" value="0.1145" />
         <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/drawable-v24/onboarding_mark.xml" value="0.1145" />
         <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/drawable-v24/onboarding_markoutline.xml" value="0.1145" />
+        <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/drawable-v24/transferbg.xml" value="0.1215" />
+        <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/drawable-v24/yellowoutline.xml" value="0.1215" />
+        <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/activity_create_post.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/activity_main.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/activity_mukt_reels.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/activity_onboarding_screen.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/activity_splash_screen.xml" value="0.12" />
         <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/each_reel.xml" value="0.10526315789473684" />
+        <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/fragment_create_post.xml" value="0.22" />
         <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/fragment_home.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/fragment_onboarding1.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/fragment_onboarding2.xml" value="0.16666666666666666" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/post_layout.xml" value="0.14666666666666667" />
-=======
-=======
->>>>>>> master
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/drawable/background_dialog.xml" value="0.112" />
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/drawable/button_outlined.xml" value="0.1775" />
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/drawable/button_outlined_blue.xml" value="0.2315" />
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/drawable/chatbot_dp.xml" value="0.1775" />
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/drawable/edittext.xml" value="0.2315" />
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/drawable/vec_bot_status.xml" value="0.1775" />
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/drawable/vec_cancel.xml" value="0.112" />
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/drawable/vec_chatbot_btn_logo.xml" value="0.2315" />
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/layout/activity_onboarding_screen.xml" value="0.1" />
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/layout/chatbot_dialog.xml" value="0.264" />
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/layout/dialog_message_chatbot.xml" value="0.2" />
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/layout/fragment_onboarding1.xml" value="0.1" />
-        <entry key="..\:/Users/dubey/OneDrive/Documents/GitHub/Mukt/app/src/main/res/layout/fragment_onboarding2.xml" value="0.1" />
-<<<<<<< HEAD
->>>>>>> 503f9fb (Implemented ChatBot(Mukti) Currently Offline)
-=======
->>>>>>> master
+        <entry key="..\:/Users/Tejash Seth/AndroidStudioProjects/Mukt/app/src/main/res/layout/post_layout.xml" value="0.16666666666666666" />
       </map>
     </option>
   </component>
