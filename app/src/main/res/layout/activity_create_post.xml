@@ -85,8 +85,8 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/author_panel"
             android:layout_above="@id/post_hashtag"
+            android:layout_below="@+id/author_panel"
             android:scrollbars="vertical">
 
             <LinearLayout

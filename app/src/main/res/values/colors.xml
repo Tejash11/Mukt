@@ -11,4 +11,12 @@
     <color name="off_white">#D4D4D4</color>
     <color name="off_white_dark">#9B9A9A</color>
     <color name="primary_blue">#5265ff</color>
+    <color name="green">#37B874</color>
+    <color name="green_trans">#4D37B874</color>
+    <color name="blue_trans">#4D379AB8</color>
+    <color name="blue">#379AB8</color>
+    <color name="red">#B8374F</color>
+    <color name="red_trans">#4DB8374F</color>
+    <color name="yellow">#B89637</color>
+    <color name="yellow_trans">#4DB89637</color>
 </resources>
