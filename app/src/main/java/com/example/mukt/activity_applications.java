@@ -43,14 +43,29 @@ public class activity_applications extends AppCompatActivity {
 
     }
 
+
+ImageView backbutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_applications);
 
+
         apply = findViewById(R.id.apply);
         apply.setVisibility(View.GONE);
         main = new Application_Fragment1();
+
+        backbutton = findViewById(R.id.backbutton_applications);
+
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =  new Intent(activity_applications.this,MainActivity.class);
+                startActivity(i);
+            }
+        });
+        RecyclerView rcv1 = findViewById(R.id.application_recycler1);
+
 
         getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).add(R.id.Frag_container,main,null).commit();
 
