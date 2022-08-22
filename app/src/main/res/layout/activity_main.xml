@@ -46,15 +46,18 @@
             android:padding="10dp"
             android:id="@+id/homebtn"
             android:layout_weight="1"
-            android:src="@drawable/homeoutline"/>
+            android:src="@drawable/homeoutline"
+            />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:id="@+id/commbtn"
             android:padding="10dp"
+            android:id="@+id/eventbtn"
+            android:layout_weight="1"
+            android:src="@drawable/homeoutline"
             />
+
 
         <ImageView
             android:layout_width="match_parent"
