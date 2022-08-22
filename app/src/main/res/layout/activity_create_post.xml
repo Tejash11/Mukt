@@ -179,7 +179,8 @@
                 android:layout_marginLeft="120dp"
                 android:layout_marginRight="20dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/transferbg"/>
+                android:background="@drawable/transferbg"
+                android:layout_marginBottom="5dp"/>
         </LinearLayout>
     </RelativeLayout>
 

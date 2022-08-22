@@ -4,17 +4,29 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
 public class activity_applications extends AppCompatActivity {
-
+ImageView backbutton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_applications);
 
+        backbutton = findViewById(R.id.backbutton_applications);
+
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i =  new Intent(activity_applications.this,MainActivity.class);
+                startActivity(i);
+            }
+        });
         RecyclerView rcv1 = findViewById(R.id.application_recycler1);
 
         ArrayList<JobClass1> jobs1 = new ArrayList<>();
