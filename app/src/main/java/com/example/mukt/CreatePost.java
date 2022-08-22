@@ -29,7 +29,7 @@ import java.util.UUID;
 
 public class CreatePost extends AppCompatActivity {
 
-    ImageView camera, gallery, postimage;
+    ImageView camera, gallery, postimage, backbutton;
     TextView postbtn, hashtag;
     EditText caption;
 
@@ -38,6 +38,7 @@ public class CreatePost extends AppCompatActivity {
 
     FirebaseStorage storage;
     StorageReference storageReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +50,15 @@ public class CreatePost extends AppCompatActivity {
         postbtn = (TextView) findViewById(R.id.postbtn);
         hashtag = (TextView) findViewById(R.id.post_hashtag);
         caption = (EditText) findViewById(R.id.post_caption);
+        backbutton = (ImageView) findViewById(R.id.backbutton);
+
+        backbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(CreatePost.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
 
 
         storage = FirebaseStorage.getInstance();
@@ -80,28 +90,25 @@ public class CreatePost extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK
-                && data != null && data.getData() != null )
-        {
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK
+                && data != null && data.getData() != null) {
             filePath = data.getData();
             try {
                 Bitmap bitmap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
                 postimage.setImageBitmap(bitmap);
-            }
-             catch (IOException e) {
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
 
     private void uploadImage() {
-        if(filePath != null)
-        {
+        if (filePath != null) {
             final ProgressDialog progressDialog = new ProgressDialog(this);
             progressDialog.setTitle("Sharing Post...");
             progressDialog.show();
 
-            StorageReference ref = storageReference.child("images/"+ UUID.randomUUID().toString());
+            StorageReference ref = storageReference.child("images/" + UUID.randomUUID().toString());
             ref.putFile(filePath)
                     .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
@@ -114,15 +121,15 @@ public class CreatePost extends AppCompatActivity {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             progressDialog.dismiss();
-                            Toast.makeText(CreatePost.this, "Post Failed "+e.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(CreatePost.this, "Post Failed " + e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     })
                     .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
-                            double progress = (100.0*taskSnapshot.getBytesTransferred()/taskSnapshot
+                            double progress = (100.0 * taskSnapshot.getBytesTransferred() / taskSnapshot
                                     .getTotalByteCount());
-                            progressDialog.setMessage("Posted "+(int)progress+"%");
+                            progressDialog.setMessage("Posted " + (int) progress + "%");
                         }
                     });
         }

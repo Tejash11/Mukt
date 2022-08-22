@@ -45,6 +45,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
         holder.caption.setText(posts.get(position).getCaption());
         holder.like.setText(String.valueOf(posts.get(position).getLike()));
         holder.comment.setText(String.valueOf(posts.get(position).getComment()));
+        holder.date.setText(String.valueOf(posts.get(position).getData()));
+        holder.time.setText(String.valueOf(posts.get(position).getTime()));
 //        holder.share.setText(posts.get(position).getShare());
 //        holder.save.setText(posts.get(position).getSave());
 
@@ -74,6 +76,8 @@ public class PostAdapter extends RecyclerView.Adapter<PostAdapter.ViewHolder> {
             comment = itemView.findViewById(R.id.comment_posts);
             share = itemView.findViewById(R.id.share_posts);
             save = itemView.findViewById(R.id.save_posts);
+            date = itemView.findViewById(R.id.date_posts);
+            time = itemView.findViewById(R.id.time_posts);
         }
     }
 }
