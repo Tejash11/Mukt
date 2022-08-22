@@ -9,11 +9,11 @@
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
 
-        android:layout_width="match_parent"
-        android:background="#FFFFFF"
         android:id="@+id/drawerlayout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF">
 
 
         <FrameLayout
@@ -26,14 +26,13 @@
 
 
         <com.google.android.material.bottomappbar.BottomAppBar
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
             android:id="@+id/navigation_bar"
-            app:fabCradleRoundedCornerRadius="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
             android:layout_gravity="bottom"
+            android:backgroundTint="@color/white"
             app:fabCradleMargin="10dp"
-            android:backgroundTint="#022C4E"
-            >
+            app:fabCradleRoundedCornerRadius="50dp">
 
 
         </com.google.android.material.bottomappbar.BottomAppBar>
@@ -41,65 +40,151 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="45dp"
             android:layout_gravity="bottom"
             android:gravity="center"
             android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="10dp"
-                android:id="@+id/homebtn"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:src="@drawable/homeoutline"/>
+                android:orientation="vertical">
 
+                <ImageView
+                    android:id="@+id/homebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:src="@drawable/explore" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Explore"
+                    android:layout_gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/oxygen"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
             <ImageView
-                android:layout_width="match_parent"
+                android:id="@+id/eventbtn"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:id="@+id/commbtn"
-                android:padding="10dp"
-                />
+                android:padding="4dp"
+                android:src="@drawable/event" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Events"
+                android:layout_gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/oxygen"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                />
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/createpostbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:src="@drawable/add" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Post"
+                    android:layout_gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/oxygen"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:id="@+id/shopbtn"
-                android:padding="10dp"
-                />
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/notificationbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:src="@drawable/notification" />
 
-            <ImageView
-                android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notification"
+                    android:layout_gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/oxygen"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_height="match_parent"
-                android:padding="10dp"
-                android:id="@+id/userbtn"
-                android:src="@drawable/useroutline"/>
+                android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/userbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="4dp"
+                    android:src="@drawable/user" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:layout_gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/oxygen"/>
+
+            </LinearLayout>
 
 
         </LinearLayout>
 
 
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:id="@+id/creatpostbtn"
-            android:layout_height="wrap_content"
-            app:layout_anchor="@id/navigation_bar"
-            android:backgroundTint="@color/white"
-            android:src="@drawable/add"
-            android:scaleType="center"
-            app:maxImageSize="35dp"
-            android:contentDescription="TODO" />
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/creatpostbtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:contentDescription="TODO"-->
+<!--            android:scaleType="center"-->
+<!--            android:src="@drawable/add"-->
+<!--            app:layout_anchor="@id/navigation_bar"-->
+<!--            app:maxImageSize="35dp" />-->
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
@@ -110,8 +195,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="55dp"
         android:backgroundTint="@color/primary_blue"
         android:src="@drawable/vec_chatbot_floating_logo"
         app:tint="@color/white"

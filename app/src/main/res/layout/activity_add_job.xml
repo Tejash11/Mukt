@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddJobActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backbutton_applications_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/back_arrow" />
+
+        <ImageView
+            android:id="@+id/optionsbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/vec_options" />
+
+        <TextView
+            android:id="@+id/publish_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publish a "
+            android:layout_below="@id/backbutton_applications_add"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:id="@+id/gig"
+            android:layout_toRightOf="@id/publish_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gig"
+            android:layout_below="@id/backbutton_applications_add"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="25sp"
+            android:textColor="@color/primary_blue"
+            android:layout_marginTop="10dp"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/gig"
+            android:id="@+id/edittextjob_title"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Job title"
+            app:boxBackgroundColor="#1A5265FF"
+            android:layout_margin="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:fontFamily="@font/poppins_regular"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/edittextjob_title"
+            android:id="@+id/edittext_orgs_container"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Organization"
+            app:boxBackgroundColor="#1A5265FF"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="20dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/edittext_orgs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/edittext_orgs_container"
+            android:id="@+id/edittext_category_contaniner"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Category"
+            app:boxBackgroundColor="#1A5265FF"
+            android:layout_marginHorizontal="20dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/edittext_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edittext_description"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/edittext_category_contaniner"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#1A5265FF"
+            android:hint="Description"
+            app:boxBackgroundColor="#1A5265FF"
+            app:boxStrokeWidth="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="15dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/on_or_off"
+            android:layout_marginTop="-10dp"
+            android:layout_below="@id/edittext_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="On-site"
+                android:gravity="end"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch1"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:trackTint="@color/primary_blue_trans"
+                app:thumbTint="@color/primary_blue"/>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:layout_weight="7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remote"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                android:textSize="15dp"/>
+
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/on_or_off"
+            android:id="@+id/edittext_type_contaniner"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Internship/ Full Time/ Part Time"
+            app:boxBackgroundColor="#1A5265FF"
+            android:layout_marginHorizontal="20dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/edittext_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/skills_container"
+            android:layout_below="@id/edittext_type_contaniner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#1A5265FF"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/skills_input"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skills Preferred"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBox_creative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/skills_input"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="7"
+                android:text="Creative"
+                app:buttonTint="#805265FF"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_toRightOf="@id/checkBox_creative"
+                android:id="@+id/checkBox_comm"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/skills_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:text="Communication"
+                app:buttonTint="#805265FF"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:layout_toRightOf="@id/checkBox_comm"
+                android:id="@+id/checkBox_commerce"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/skills_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:text="Commerce"
+                app:buttonTint="#805265FF"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBox_organization"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/checkBox_creative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:text="Organization"
+                app:buttonTint="#805265FF"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBox_artist"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/checkBox_creative"
+                android:layout_toRightOf="@id/checkBox_organization"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:text="Artist"
+                app:buttonTint="#805265FF"/>
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBox_ps"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/checkBox_creative"
+                android:layout_toRightOf="@id/checkBox_artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="7"
+                android:text="Problem Solving"
+                app:buttonTint="#805265FF"/>
+
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/edittext_perks"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/skills_container"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="#1A5265FF"
+            android:hint="Perks"
+            app:boxBackgroundColor="#1A5265FF"
+            app:boxStrokeWidth="0dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="15dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edittext_perks"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="Contact details"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/contact"
+            android:id="@+id/edittext_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            app:boxBackgroundColor="#1A5265FF"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:fontFamily="@font/poppins_regular" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/edittext_email"
+            android:id="@+id/edittext_phone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone (Optional)"
+            app:boxBackgroundColor="#1A5265FF"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="italic"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/edittext_phone"
+            android:id="@+id/edittext_instagram"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Instagram Profile URL (Optional)"
+            app:boxBackgroundColor="#1A5265FF"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="italic"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/edittext_instagram"
+            android:id="@+id/edittext_facebook"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Facebook Page URL (Optional)"
+            app:boxBackgroundColor="#1A5265FF"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="italic"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_below="@id/edittext_facebook"
+            android:id="@+id/edittext_twitter"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Twitter Profile URL (Optional)"
+            app:boxBackgroundColor="#1A5265FF"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="italic"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="10dp"
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginHorizontal="70dp"
+            android:layout_below="@id/edittext_twitter"
+            android:layout_marginBottom="40dp"
+            android:background="#00FFFFFF"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary_blue"
+                android:elevation="10dp">
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="SUBMIT"
+                    android:textSize="17sp"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+<!--        <EditText-->
+<!--            android:id="@+id/editText_gigname"-->
+<!--            android:layout_below="@id/gig"-->
+<!--            android:layout_marginTop="30dp"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="text"-->
+<!--            android:hint="Job title"-->
+<!--            android:focusedByDefault="true"-->
+<!--            android:layout_marginHorizontal="20dp"-->
+<!--            android:drawablePadding="12dp"-->
+<!--            android:padding="15dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:background="@drawable/edittext_back"/>-->
+
+
+    </RelativeLayout>
+
+</ScrollView>
