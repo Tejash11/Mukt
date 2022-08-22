@@ -1,6 +1,7 @@
 package com.example.mukt;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -36,6 +37,7 @@ import java.util.List;
  * create an instance of this fragment.
  */
 public class Home extends Fragment {
+    ImageView openMoreFeaturebtn;
     Context context;
     public Home(Context context){
         this.context = context;
@@ -92,6 +94,15 @@ public class Home extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        openMoreFeaturebtn = view.findViewById(R.id.openMoreFeature);
+        openMoreFeaturebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getContext(),FeaturedActivity.class);
+                startActivity(i);
+            }
+        });
 
         RecyclerView recyclerView = view.findViewById(R.id.posts_recycler);
         ArrayList<Post> arrayListPost = new ArrayList<>();
