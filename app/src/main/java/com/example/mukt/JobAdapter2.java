@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -31,9 +32,17 @@ public class JobAdapter2 extends RecyclerView.Adapter<JobAdapter2.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        int pos = position;
         holder.name.setText(jobs.get(position).getName());
         holder.org.setText(jobs.get(position).getOrgName());
         holder.logo.setImageResource(jobs.get(position).getLogo());
+        holder.card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activity_applications details = (activity_applications) context;
+                details.ChangeToDetailsFragment(jobs.get(pos));
+            }
+        });
     }
 
     @Override
@@ -45,11 +54,13 @@ public class JobAdapter2 extends RecyclerView.Adapter<JobAdapter2.ViewHolder> {
         TextView name;
         ImageView logo;
         TextView org;
+        CardView card;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.gig_name);
             org = itemView.findViewById(R.id.org_name);
             logo = itemView.findViewById(R.id.orgs_logos);
+            card = itemView.findViewById(R.id.application_card2);
         }
     }
 }

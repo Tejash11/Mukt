@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Application_Fragment1"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/application_recycler1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/getrole_text"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/application_recycler1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get a"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/getrole_text"
+            android:layout_below="@id/application_recycler1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="role"
+            android:layout_marginLeft="7dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="25sp"
+            android:textColor="@color/primary_blue"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical"
+            android:id="@+id/application_recycler2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/getrole_text" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/viewmore_card"
+            android:layout_below="@id/application_recycler2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            android:background="#00FFFFFF"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary_blue">
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="View 34 more"
+                    android:textSize="17sp"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/completetask"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/viewmore_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complete"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/completetask"
+            android:layout_below="@id/viewmore_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tasks"
+            android:layout_marginLeft="7dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="25sp"
+            android:textColor="@color/primary_blue"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginHorizontal="10dp"
+            android:orientation="vertical"
+            android:id="@+id/application_recycler3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/completetask" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/viewmore_task_card"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_below="@id/application_recycler3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginVertical="5dp"
+            android:background="#00FFFFFF"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="2dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary_blue">
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="View 50 more"
+                    android:textSize="17sp"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</FrameLayout>

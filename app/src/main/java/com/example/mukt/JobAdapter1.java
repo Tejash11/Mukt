@@ -36,12 +36,21 @@ public class JobAdapter1 extends RecyclerView.Adapter<JobAdapter1.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        int pos = position;
         holder.name.setText(jobs.get(position).getName());
         holder.name.setTextColor(context.getResources().getColor(jobs.get(position).getBackColor()));
         holder.logo.setImageResource(jobs.get(position).getImage());
         holder.back.setBackgroundResource(jobs.get(position).getBack());
         holder.arrow.setImageResource(jobs.get(position).getArrow());
         holder.org.setCardBackgroundColor(context.getResources().getColor(jobs.get(position).getColorTrans()));
+        holder.card.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activity_applications details = (activity_applications) context;
+                details.ChangeToDetailsFragment(jobs.get(pos));
+            }
+        });
+
     }
 
     @Override
@@ -50,6 +59,7 @@ public class JobAdapter1 extends RecyclerView.Adapter<JobAdapter1.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        CardView card;
         TextView name;
         RelativeLayout back;
         ImageView arrow;
@@ -57,6 +67,7 @@ public class JobAdapter1 extends RecyclerView.Adapter<JobAdapter1.ViewHolder> {
         CardView org;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            card = itemView.findViewById(R.id.application_card1);
             name = itemView.findViewById(R.id.job_name);
             back = itemView.findViewById(R.id.application_card1_back);
             arrow = itemView.findViewById(R.id.forward_btn_application);

@@ -118,6 +118,7 @@
                         android:textStyle="bold" />
 
                     <ImageView
+                        android:id="@+id/openMoreFeature"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
@@ -160,7 +161,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/featuredpost" />
+                            android:src="@drawable/featuredpost2" />
 
                     </androidx.cardview.widget.CardView>
 
@@ -175,7 +176,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:scaleType="centerCrop"
-                            android:src="@drawable/featuredpost" />
+                            android:src="@drawable/featuredpost3" />
 
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
