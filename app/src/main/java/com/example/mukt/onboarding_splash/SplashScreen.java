@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
 
+import com.example.mukt.MainActivity;
 import com.example.mukt.R;
 
 public class SplashScreen extends AppCompatActivity {
@@ -22,8 +23,9 @@ public class SplashScreen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intents=new Intent(SplashScreen.this, OnboardingScreen.class);
-                intents.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                Intent intents=new Intent(SplashScreen.this, MainActivity.class);
+                //intents.setFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                intents.putExtra("direction", "home");
                 startActivity(intents);
                 finish();
             }

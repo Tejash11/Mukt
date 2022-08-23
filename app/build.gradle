@@ -5,12 +5,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.example.mukt"
-        minSdk 21
-        targetSdk 32
+        minSdk 19
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -40,8 +40,6 @@ dependencies {
     implementation 'com.google.android.material:material:1.6.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.firebase:firebase-auth:19.2.0'
-    implementation 'com.google.firebase:firebase-database:19.2.1'
     implementation 'com.google.android.gms:play-services-maps:17.0.1'
     implementation 'com.google.firebase:firebase-storage:20.0.0'
     testImplementation 'junit:junit:4.13.2'
@@ -58,5 +56,20 @@ dependencies {
     implementation 'com.airbnb.android:lottie:3.6.1'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
+    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0'
+
+
+    implementation 'com.google.firebase:firebase-auth:21.0.7'
+    implementation 'com.firebaseui:firebase-ui-database:8.0.1'
+    implementation 'com.google.firebase:firebase-database:20.0.5'
+    implementation 'com.google.firebase:firebase-storage:20.0.1'
+
+    implementation "androidx.cardview:cardview:1.0.0"
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    implementation 'com.karumi:dexter:6.2.3'
+
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
 }

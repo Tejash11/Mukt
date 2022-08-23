@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".event_section.event_view_details">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".event_section.event_view">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                android:id="@+id/event_img_view"
+                android:src="@drawable/mukt_icon"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/event_name_type_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/circular_blue_border"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="Event Type"
+                    android:textColor="#2196F3"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="20k participants going"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="14sp"
+                    android:layout_marginLeft="70dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:id="@+id/event_name_view"
+                android:text="Event Name"
+                android:layout_gravity="center_vertical"
+                android:textSize="38sp"
+                android:layout_marginLeft="20dp"
+                android:gravity="center"
+                android:fontFamily="@font/poppins_semibold"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:layout_margin="25dp"
+                    android:background="@drawable/light_blue_solid_dark_blue_outline"
+                    android:src="@drawable/event_icon"
+                    android:padding="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Date"
+                        android:layout_weight="1.2"
+                        android:id="@+id/event_date_view"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/poppins_semibold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Time"
+                        android:textColor="@color/black"
+                        android:layout_weight="1.2"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/event_time_view"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/poppins"/>
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:background="@drawable/circular_blue_border"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:padding="7dp"
+                        android:text="Set at Calendar"
+                        android:textColor="#2196F3"
+                        android:textSize="14sp" />
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_height="100dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:layout_margin="25dp"
+                    android:background="@drawable/light_blue_solid_dark_blue_outline"
+                    android:src="@drawable/location_icon"
+                    android:padding="10dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Venue"
+                        android:layout_weight="1.2"
+                        android:id="@+id/event_venue_view"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="20sp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/poppins_semibold"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Venue Address"
+                        android:textColor="@color/black"
+                        android:layout_weight="1.2"
+                        android:id="@+id/event_address_view"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/poppins"/>
+
+                    <TextView
+                        android:id="@+id/event_name_type"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_margin="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="0dp"
+                        android:background="@drawable/circular_blue_border"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:padding="7dp"
+                        android:text="View at Map"
+                        android:textColor="#2196F3"
+                        android:textSize="14sp" />
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:text="View at Mukt Metaverse"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:id="@+id/view_meta"
+                android:layout_marginTop="30dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:background="@drawable/blue_circular_solid"/>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Event Documentation"
+                    android:textSize="23sp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="Event Documentation"
+                    android:textSize="16sp"
+                    android:id="@+id/event_doc_view"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:textColor="#2196F3"/>
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/event_frag_parent"
+    android:layout_height="match_parent"
+    tools:context=".event_section.Event">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:src="@drawable/mukt_icon"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Event List"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center_vertical"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:id="@+id/create_event_btn"
+                android:layout_weight="2"
+                android:src="@drawable/plus"/>
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="horizontal"
+            android:id="@+id/event_types"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/event_frag">
+        </FrameLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</FrameLayout>
