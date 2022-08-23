@@ -42,37 +42,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Intent i = this.getIntent();
-
         ImageView homebtn = (ImageView) findViewById(R.id.homebtn);
-        ImageView bazaarbtn = (ImageView) findViewById(R.id.shopbtn);
         ImageView eventbtn = (ImageView) findViewById(R.id.eventbtn);
+        ImageView notificationbtn = (ImageView) findViewById(R.id.notificationbtn);
         ImageView userbtn = (ImageView) findViewById(R.id.userbtn);
-//        FloatingActionButton muktbtn = (FloatingActionButton) findViewById(R.id.muktbtn);
-        FloatingActionButton createpostbtn = (FloatingActionButton) findViewById(R.id.creatpostbtn);
+//       ImageView muktreelsbtn = (ImageView) findViewById(R.id.muktbtn);
+        ImageView createpostbtn = (ImageView) findViewById(R.id.createpostbtn);
 
-        if(i.getStringExtra("direction").equals("event"))
-        {
-            FragmentManager m = getSupportFragmentManager();
-            FragmentTransaction t = m.beginTransaction();
-            Fragment events = new Event("Nukkad Natak");
-            t.replace(R.id.fragment, events);
-            t.disallowAddToBackStack().commit();
-            homebtn.setImageResource(R.drawable.homeoutline);
-            bazaarbtn.setImageResource(R.drawable.homecolor);
-            // communitybtn.setImageResource(R.drawable.heart_colour);
-            userbtn.setImageResource(R.drawable.useroutline);
-        }
-        else
-        {
-            FragmentManager m = getSupportFragmentManager();
-            FragmentTransaction t = m.beginTransaction();
-            Fragment Home = new Home();
-            t.replace(R.id.fragment,Home);
-            t.commit();
-            homebtn.setImageResource(R.drawable.homecolor);
-        }
-
+        FragmentManager m = getSupportFragmentManager();
+        FragmentTransaction t = m.beginTransaction();
+        Fragment Home = new Home();
+        t.replace(R.id.fragment,Home);
+        t.commit();
+        homebtn.setImageResource(R.drawable.homecolor);
 
         homebtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,11 +63,11 @@ public class MainActivity extends AppCompatActivity {
                 FragmentTransaction t = m.beginTransaction();
                 Fragment Home = new Home();
                 t.replace(R.id.fragment, Home);
-                t.disallowAddToBackStack().commit();
+                t.commit();
                 homebtn.setImageResource(R.drawable.homecolor);
-//                bazaarbtn.setImageResource(R.drawable.shopoutline);
-                eventbtn.setImageResource(R.drawable.homeoutline);
-                userbtn.setImageResource(R.drawable.useroutline);
+//                eventbtn.setImageResource(R.drawable.event);
+                notificationbtn.setImageResource(R.drawable.notification);
+                userbtn.setImageResource(R.drawable.user);
             }
         });
 
@@ -94,58 +76,68 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 FragmentManager m = getSupportFragmentManager();
                 FragmentTransaction t = m.beginTransaction();
-                Fragment events = new Event("Nukkad Natak");
-                t.replace(R.id.fragment, events);
-                t.disallowAddToBackStack().commit();
-                homebtn.setImageResource(R.drawable.homeoutline);
-                bazaarbtn.setImageResource(R.drawable.homecolor);
-               // communitybtn.setImageResource(R.drawable.heart_colour);
-                userbtn.setImageResource(R.drawable.useroutline);
+                Fragment community = new Event();
+                t.replace(R.id.fragment, community);
+                t.commit();
+                homebtn.setImageResource(R.drawable.explore);
+                eventbtn.setImageResource(R.drawable.eventcolor);
+                notificationbtn.setImageResource(R.drawable.notification);
+                userbtn.setImageResource(R.drawable.user);
             }
         });
-//
-//        bazaarbtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
+
+        notificationbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 //                FragmentManager m = getSupportFragmentManager();
 //                FragmentTransaction t = m.beginTransaction();
-//                Fragment bazaar = new Bazaar();
-//                t.replace(R.id.fragment, bazaar);
+//                Fragment notification = new Notification();
+//                t.replace(R.id.fragment, notification);
 //                t.commit();
-//                homebtn.setImageResource(R.drawable.homeoutline);
-//                bazaarbtn.setImageResource(R.drawable.shopcolor);
-//                communitybtn.setImageResource(R.drawable.heart);
-//                userbtn.setImageResource(R.drawable.useroutline);
-//            }
-//        });
-
+//                homebtn.setImageResource(R.drawable.explore);
+////                eventbtn.setImageResource(R.drawable.event);
+//                notificationbtn.setImageResource(R.drawable.notificationcolor);
+//                userbtn.setImageResource(R.drawable.user);
+            }
+        });
 
         userbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager m = getSupportFragmentManager();
-                FragmentTransaction t = m.beginTransaction();
-                Fragment user = new Profile();
-                t.replace(R.id.fragment, user);
-                t.commit();
-                homebtn.setImageResource(R.drawable.homeoutline);
-                //bazaarbtn.setImageResource(R.drawable.shopoutline);
-                //communitybtn.setImageResource(R.drawable.heart);
+                Intent intent = new Intent(MainActivity.this,activity_applications.class);
+                startActivity(intent);
+
+                homebtn.setImageResource(R.drawable.explore);
+//                eventbtn.setImageResource(R.drawable.event);
+                notificationbtn.setImageResource(R.drawable.notification);
                 userbtn.setImageResource(R.drawable.usercolor);
             }
         });
-//
+
+
         createpostbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(MainActivity.this,CreatePost.class);
                 startActivity(i);
-//                homebtn.setImageResource(R.drawable.homeoutline);
-////                bazaarbtn.setImageResource(R.drawable.shopoutline);
-////                communitybtn.setImageResource(R.drawable.heart);
-//                userbtn.setImageResource(R.drawable.useroutline);
+                homebtn.setImageResource(R.drawable.explore);
+//                eventbtn.setImageResource(R.drawable.event);
+                notificationbtn.setImageResource(R.drawable.notification);
+                userbtn.setImageResource(R.drawable.user);
             }
         });
+
+//        muktreelsbtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent i = new Intent(MainActivity.this,Mukt_reels.class);
+//                startActivity(i);
+//                homebtn.setImageResource(R.drawable.explore);
+////                eventbtn.setImageResource(R.drawable.event);
+//                notificationbtn.setImageResource(R.drawable.notification);
+//                userbtn.setImageResource(R.drawable.user);
+//            }
+//        });
         dlg = new Dialog(MainActivity.this);
         dlg.setContentView(R.layout.dialog_chatbot);
         dlg.getWindow().setBackgroundDrawable(getDrawable(R.drawable.background_dialog));
@@ -188,14 +180,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(messagesRecyclerAdapter);
 
 
-        userbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,activity_applications.class);
-                startActivity(intent);
-            }
-        });
-        
+
+
     }
 }
-

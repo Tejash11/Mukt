@@ -27,10 +27,14 @@
             android:exported="false" />
         <activity
             android:name=".event_section.event_create"/>
-       <activity
-            android:name=".activity_applications" />
-        <activity
-            android:name=".Notification" />
+<!--       <activity-->
+<!--            android:name=".FeaturedActivity"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".AddJobActivity"-->
+<!--            android:exported="false" />-->
+        <activity android:name=".activity_applications" />
+        <activity android:name=".Notification" />
         <activity
             android:name=".Mukt_reels"
 
@@ -69,27 +73,25 @@
         <activity
             android:name=".onboarding_splash.SplashScreen"
             android:exported="true">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".CreatePost"
+            android:exported="true"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".CreatePost"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
-
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
         </activity>
 
 
