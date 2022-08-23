@@ -1,57 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#FFFFFF"
-    android:id="@+id/drawerlayout"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
 
-    <FrameLayout
-        android:id="@+id/fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@id/navigation_bar">
-
-    </FrameLayout>
-
-
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:id="@+id/navigation_bar"
-        app:fabCradleRoundedCornerRadius="50dp"
-        android:layout_gravity="bottom"
-        app:fabCradleMargin="10dp"
-        android:backgroundTint="#022C4E"
-        >
+        android:background="#FFFFFF"
+        android:id="@+id/drawerlayout"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
 
 
-    </com.google.android.material.bottomappbar.BottomAppBar>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_gravity="bottom"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <ImageView
+        <FrameLayout
+            android:id="@+id/fragment"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp"
-            android:id="@+id/homebtn"
-            android:layout_weight="1"
-            android:src="@drawable/homeoutline"
-            />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="match_parent
             android:padding="10dp"
             android:id="@+id/eventbtn"
             android:layout_weight="1"
@@ -64,38 +32,105 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             />
+            android:layout_above="@id/navigation_bar">
 
-        <ImageView
+        </FrameLayout>
+
+
+
+        <com.google.android.material.bottomappbar.BottomAppBar
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:id="@+id/shopbtn"
-            android:padding="10dp"
-            />
+            android:layout_height="40dp"
+            android:id="@+id/navigation_bar"
+            app:fabCradleRoundedCornerRadius="50dp"
+            android:layout_gravity="bottom"
+            app:fabCradleMargin="10dp"
+            android:backgroundTint="#022C4E"
+            >
 
-        <ImageView
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:padding="10dp"
-            android:id="@+id/userbtn"
-            android:src="@drawable/useroutline"/>
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:id="@+id/homebtn"
+                android:layout_weight="1"
+                android:src="@drawable/homeoutline"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/commbtn"
+                android:padding="10dp"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/shopbtn"
+                android:padding="10dp"
+                />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                android:id="@+id/userbtn"
+                android:src="@drawable/useroutline"/>
 
 
 
-    </LinearLayout>
+        </LinearLayout>
 
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:id="@+id/creatpostbtn"
+            android:layout_height="wrap_content"
+            app:layout_anchor="@id/navigation_bar"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/add"
+            android:scaleType="center"
+            app:maxImageSize="35dp"
+            android:contentDescription="TODO" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
-        android:id="@+id/dumbbellbtn"
         android:layout_height="wrap_content"
-        app:layout_anchor="@id/navigation_bar"
-        android:tint="@color/white"
-        android:backgroundTint="@color/white"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="@color/primary_blue"
+        android:src="@drawable/vec_chatbot_floating_logo"
+        app:tint="@color/white"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        app:maxImageSize="50dp"
-        android:contentDescription="TODO" />
+</RelativeLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
