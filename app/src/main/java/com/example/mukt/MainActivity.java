@@ -1,7 +1,11 @@
 package com.example.mukt;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -9,10 +13,13 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.ContactsContract;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
 import com.example.mukt.event_section.Event;
+import com.example.mukt.event_section.event_create;
 import com.example.mukt.profile_section.Profile;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -28,8 +35,10 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
@@ -43,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.nav_activity_main);
 
         ImageView homebtn = (ImageView) findViewById(R.id.homebtn);
         ImageView eventbtn = (ImageView) findViewById(R.id.eventbtn);
@@ -181,6 +190,51 @@ public class MainActivity extends AppCompatActivity {
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(messagesRecyclerAdapter);
+
+
+        NavigationView nv = findViewById(R.id.nav_view);
+        nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+                //Applications
+                if(menuItem.getItemId() == R.id.nav_home)
+                {
+                    Intent intent = new Intent(MainActivity.this,activity_applications.class);
+                    startActivity(intent);
+                    //Toast.makeText(getApplicationContext(),"First",Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(this,"First",Toast.LENGTH_SHORT).show();
+
+                }
+                else if(menuItem.getItemId() == R.id.nav_gallery)
+                {
+                    Toast.makeText(getApplicationContext(),"Training and Management",Toast.LENGTH_SHORT).show();
+                }
+                else if(menuItem.getItemId() == R.id.nav_emergency)
+                {
+                    Intent intent = new Intent(MainActivity.this, event_create.class);
+                    startActivity(intent);
+                   // Toast.makeText(getApplicationContext(),"Third",Toast.LENGTH_SHORT).show();
+                }
+                else if(menuItem.getItemId() == R.id.nav_book)
+                {
+                    Toast.makeText(getApplicationContext(),"About Mukt",Toast.LENGTH_SHORT).show();
+                }
+
+
+
+                DrawerLayout dr = findViewById(R.id.drawer_layout);
+                dr.closeDrawer(GravityCompat.START);
+
+                return true;
+            }
+        });
+
+
+
+
+
+
 
 
 

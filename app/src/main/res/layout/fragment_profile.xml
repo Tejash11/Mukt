@@ -107,7 +107,7 @@
                     android:layout_width="80dp"
                     android:layout_height="2dp"
                     android:rotation="90"
-                    android:background="@color/black"
+                    android:background="@color/off_white_dark"
                     android:layout_gravity="center"/>
 
                 <LinearLayout
@@ -143,7 +143,7 @@
                     android:layout_width="80dp"
                     android:layout_height="2dp"
                     android:rotation="90"
-                    android:background="@color/black"
+                    android:background="@color/off_white_dark"
                     android:layout_gravity="center"/>
 
                 <LinearLayout
@@ -182,7 +182,7 @@
                 android:layout_width="300dp"
                 android:layout_height="1.5dp"
                 android:rotation="0"
-                android:background="@color/black"
+                android:background="@color/off_white_dark"
                 android:layout_gravity="center"/>
 
             <TextView

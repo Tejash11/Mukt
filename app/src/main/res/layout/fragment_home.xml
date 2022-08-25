@@ -27,14 +27,17 @@
                 android:layout_height="60dp"
                 android:orientation="horizontal">
 
+
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:layout_marginStart="10dp"
+                    android:id="@+id/nav_icon"
                     android:layout_marginEnd="10dp"
                     android:layout_weight="1.55"
-                    android:src="@drawable/mukt_icon" />
+                    android:src="@drawable/mukt_icon"
+                     />
 
 
                 <TextView
