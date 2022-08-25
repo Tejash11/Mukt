@@ -2,6 +2,7 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
+    android:id="@+id/parent_relative"
     android:layout_height="wrap_content">
 
 
@@ -11,7 +12,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="10dp">
-
 
         <TextView
             android:id="@+id/text_box1"
@@ -61,6 +61,23 @@
 
 
     </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/play_btn_bot"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/msg_bot"
+        android:src="@drawable/play_btn" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/play_btn_user"
+        android:src="@drawable/play_btn"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/msg_user"/>
+
 
 
 
