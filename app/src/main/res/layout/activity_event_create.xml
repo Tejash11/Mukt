@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".event_section.event_create">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:padding="18dp"
+                    android:src="@drawable/back_arrow" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center_vertical"
+                    android:text="Create New Event"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/add_image_outline"
+                android:id="@+id/cover_pic"
+                android:visibility="gone"
+                android:layout_margin="40dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/img_parent"
+                android:background="@drawable/add_image_outline"
+                android:layout_margin="40dp">
+
+                <ImageView
+                    android:id="@+id/addimg_btn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/plus" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/plus_btn"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="Add Cover Image"
+                    android:textSize="15sp" />
+
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="350dp"
+                android:layout_gravity="center"
+                android:layout_height="1dp"
+                android:background="#B8B8B8"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="Event Details"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Event Name"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Name"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:id="@+id/name_txt"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/circular_blue_border"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Event Type"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Nukkad Natak/Graphics.. etc"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:id="@+id/type_txt"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/circular_blue_border"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Event Date"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="DD/MM/YYYY"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:id="@+id/date_txt"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/circular_blue_border"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Event Day"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="XYZ-Day"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:id="@+id/day_txt"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/circular_blue_border"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Event Time"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="12:00 - 24:00"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:id="@+id/time_txt"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/circular_blue_border"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Event Organizer Name"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="XYZ Institute"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:id="@+id/ogr_name_txt"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/circular_blue_border"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Venue Name"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="XYZ Auditorium"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:id="@+id/venue_txt"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/circular_blue_border"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Venue Address"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:hint="Address"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:id="@+id/address_txt"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/circular_blue_border"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Event Documentation"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Timeline, features and Prizes"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:fontFamily="@font/poppins"
+                    android:id="@+id/documentation_txt"
+                    android:background="@drawable/circular_blue_border"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Latitude"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Latitude"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:id="@+id/latitude_txt"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/circular_blue_border"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Longitude"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/poppins_semibold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Longitude"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:id="@+id/longitude_txt"
+                    android:gravity="center"
+                    android:fontFamily="@font/poppins"
+                    android:background="@drawable/circular_blue_border"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="40dp"
+                android:text="Add Event"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:id="@+id/add_btn"
+                android:layout_marginTop="30dp"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:background="@drawable/blue_circular_solid"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

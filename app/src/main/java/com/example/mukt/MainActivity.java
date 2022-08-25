@@ -12,6 +12,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.mukt.event_section.Event;
+import com.example.mukt.profile_section.Profile;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -72,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+<<<<<<< HEAD
 //        eventbtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -96,6 +99,32 @@ public class MainActivity extends AppCompatActivity {
 //                t.replace(R.id.fragment, notification);
 //                t.commit();
 //                homebtn.setImageResource(R.drawable.explore);
+=======
+        eventbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager m = getSupportFragmentManager();
+                FragmentTransaction t = m.beginTransaction();
+                Fragment community = new Event();
+                t.replace(R.id.fragment, community);
+                t.commit();
+                homebtn.setImageResource(R.drawable.explore);
+                eventbtn.setImageResource(R.drawable.eventcolor);
+                notificationbtn.setImageResource(R.drawable.notification);
+                userbtn.setImageResource(R.drawable.user);
+            }
+        });
+
+        notificationbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                FragmentManager m = getSupportFragmentManager();
+//                FragmentTransaction t = m.beginTransaction();
+//                Fragment notification = new Notification();
+//                t.replace(R.id.fragment, notification);
+//                t.commit();
+//                homebtn.setImageResource(R.drawable.explore);
+>>>>>>> afcbdd5d93d8a39c3a4347fa4e7e82b4667c2820
 ////                eventbtn.setImageResource(R.drawable.event);
 //                notificationbtn.setImageResource(R.drawable.notificationcolor);
 //                userbtn.setImageResource(R.drawable.user);

@@ -43,13 +43,17 @@ public class activity_applications extends AppCompatActivity {
 
     }
 
+<<<<<<< HEAD
 
 ImageView backbutton;
+=======
+>>>>>>> afcbdd5d93d8a39c3a4347fa4e7e82b4667c2820
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_applications);
 
+<<<<<<< HEAD
 
         apply = findViewById(R.id.apply);
         apply.setVisibility(View.GONE);
@@ -69,6 +73,14 @@ ImageView backbutton;
 
         getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).add(R.id.Frag_container,main,null).commit();
 
+=======
+        apply = findViewById(R.id.apply);
+        apply.setVisibility(View.GONE);
+        main = new Application_Fragment1();
+
+        getSupportFragmentManager().beginTransaction().setReorderingAllowed(true).add(R.id.Frag_container,main,null).commit();
+
+>>>>>>> afcbdd5d93d8a39c3a4347fa4e7e82b4667c2820
         add = findViewById(R.id.addbutton);
         add.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mukt" >
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission
         android:name="android.permission.QUERY_ALL_PACKAGES"
         tools:ignore="QueryAllPackagesPermission" />
@@ -20,6 +21,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mukt" >
         <activity
+<<<<<<< HEAD
             android:name=".TrainingActivity"
             android:exported="true" >
 <!--            <intent-filter>-->
@@ -32,8 +34,33 @@
             android:name=".AddJobActivity"
             android:exported="false" />
         <activity android:name=".activity_applications" />
+=======
+            android:name=".AddJobActivity"
+            android:exported="false" />
+        <activity android:name=".activity_applications" />
+
+<!--       <activity android:name=".Notification" />-->
+
+>>>>>>> afcbdd5d93d8a39c3a4347fa4e7e82b4667c2820
         <activity
             android:name=".Mukt_reels"
+            android:exported="false" />
+
+        <activity
+            android:name=".Notification"
+            android:exported="false"
+            tools:ignore="Instantiatable" />
+
+        <activity
+            android:name=".event_section.event_create"
+            android:exported="false" />
+
+        <activity
+            android:name=".event_section.event_view"
+            android:exported="false" />
+
+        <activity
+            android:name=".FeaturedActivity"
             android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
@@ -68,6 +95,7 @@
             android:exported="false" />
         <activity
             android:name=".onboarding_splash.SplashScreen"
+<<<<<<< HEAD
             android:exported="true" >
 
             <!-- <intent-filter> -->
@@ -86,10 +114,33 @@
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+=======
+            android:exported="true">
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+>>>>>>> afcbdd5d93d8a39c3a4347fa4e7e82b4667c2820
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+<<<<<<< HEAD
+=======
+        <activity
+            android:name=".CreatePost"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+>>>>>>> afcbdd5d93d8a39c3a4347fa4e7e82b4667c2820
 
         <meta-data
             android:name="preloaded_fonts"
