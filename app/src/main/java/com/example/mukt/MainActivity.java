@@ -1,11 +1,13 @@
 package com.example.mukt;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -35,13 +37,14 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton dialog_button;
     FloatingActionButton cancel_button;
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         ImageView homebtn = (ImageView) findViewById(R.id.homebtn);
-//        ImageView eventbtn = (ImageView) findViewById(R.id.eventbtn);
+        ImageView eventbtn = (ImageView) findViewById(R.id.eventbtn);
         ImageView notificationbtn = (ImageView) findViewById(R.id.notificationbtn);
         ImageView userbtn = (ImageView) findViewById(R.id.userbtn);
 //       ImageView muktreelsbtn = (ImageView) findViewById(R.id.muktbtn);
@@ -74,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 //            public void onClick(View v) {
 //                FragmentManager m = getSupportFragmentManager();
 //                FragmentTransaction t = m.beginTransaction();
-//                Fragment community = new Notification();
+//                Fragment community = new Event();
 //                t.replace(R.id.fragment, community);
 //                t.commit();
 //                homebtn.setImageResource(R.drawable.explore);
@@ -87,15 +90,15 @@ public class MainActivity extends AppCompatActivity {
         notificationbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentManager m = getSupportFragmentManager();
-                FragmentTransaction t = m.beginTransaction();
-                Fragment notification = new Notification();
-                t.replace(R.id.fragment, notification);
-                t.commit();
-                homebtn.setImageResource(R.drawable.explore);
-//                eventbtn.setImageResource(R.drawable.event);
-                notificationbtn.setImageResource(R.drawable.notificationcolor);
-                userbtn.setImageResource(R.drawable.user);
+//                FragmentManager m = getSupportFragmentManager();
+//                FragmentTransaction t = m.beginTransaction();
+//                Fragment notification = new Notification();
+//                t.replace(R.id.fragment, notification);
+//                t.commit();
+//                homebtn.setImageResource(R.drawable.explore);
+////                eventbtn.setImageResource(R.drawable.event);
+//                notificationbtn.setImageResource(R.drawable.notificationcolor);
+//                userbtn.setImageResource(R.drawable.user);
             }
         });
 
@@ -179,6 +182,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        
+
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.mukt">
+    package="com.example.mukt" >
 
     <uses-permission
         android:name="android.permission.QUERY_ALL_PACKAGES"
@@ -18,13 +18,20 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Mukt">
+        android:theme="@style/Theme.Mukt" >
+        <activity
+            android:name=".TrainingActivity"
+            android:exported="true" >
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
         <activity
             android:name=".AddJobActivity"
             android:exported="false" />
         <activity android:name=".activity_applications" />
-        <activity android:name=".Notification" />
-
         <activity
             android:name=".Mukt_reels"
             android:exported="false" />
@@ -61,7 +68,8 @@
             android:exported="false" />
         <activity
             android:name=".onboarding_splash.SplashScreen"
-            android:exported="true">
+            android:exported="true" >
+
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
 
@@ -71,17 +79,16 @@
         </activity>
         <activity
             android:name=".CreatePost"
-            android:exported="true">
-
+            android:exported="true" >
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
         <meta-data

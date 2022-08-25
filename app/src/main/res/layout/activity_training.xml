@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_applications">
+
+    <RelativeLayout
+        android:id="@+id/applications_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/backbutton_applications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="10dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/back_arrow" />
+
+        <ImageView
+            android:id="@+id/addbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/searchbutton"
+            android:adjustViewBounds="true"
+            android:scaleX="1.3"
+            android:scaleY="1.3"
+            android:src="@drawable/vec_plus" />
+
+        <ImageView
+            android:id="@+id/searchbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/optionsbutton"
+            android:adjustViewBounds="true"
+            android:src="@drawable/vec_search" />
+
+        <ImageView
+            android:id="@+id/optionsbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="20dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/vec_options" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/applications_panel">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/sub_panel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/Volunteer_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="25dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Mukt"
+                    android:textColor="@color/primary_blue"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/nmba_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Volunteer_text"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="-12dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Training for Volunteers"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/primary_blue" />
+            </RelativeLayout>
+
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/Frag_container2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/sub_panel" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
