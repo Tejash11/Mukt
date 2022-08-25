@@ -215,6 +215,9 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, event_create.class);
                     startActivity(intent);
                     // Toast.makeText(getApplicationContext(),"Third",Toast.LENGTH_SHORT).show();
+
+                   // Toast.makeText(getApplicationContext(),"Third",Toast.LENGTH_SHORT).show();
+
                 }
                 else if(menuItem.getItemId() == R.id.nav_book)
                 {

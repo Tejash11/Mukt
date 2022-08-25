@@ -7,6 +7,8 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -38,6 +40,8 @@ import java.util.List;
  */
 public class Home extends Fragment {
     ImageView openMoreFeaturebtn;
+    ImageView nav_icon;
+
     Context context;
     public Home(Context context){
         this.context = context;
@@ -94,6 +98,16 @@ public class Home extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        nav_icon = view.findViewById(R.id.nav_icon);
+        nav_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final DrawerLayout dr = ((MainActivity)getActivity()).findViewById(R.id.drawer_layout);
+                dr.openDrawer(GravityCompat.START);
+            }
+        });
+
 
         openMoreFeaturebtn = view.findViewById(R.id.openMoreFeature);
         openMoreFeaturebtn.setOnClickListener(new View.OnClickListener() {
