@@ -46,7 +46,7 @@ public class MessagesRecyclerAdapter extends RecyclerView.Adapter<MessagesRecycl
                 public void onInit(int i) {
                     if(i != TextToSpeech.ERROR)
                     {
-                        t.setLanguage(new Locale ("hi","IN", "variant"));
+                        t.setLanguage(new Locale ("hi","IN","variant"));
                     }
                 }
             });
@@ -74,7 +74,7 @@ public class MessagesRecyclerAdapter extends RecyclerView.Adapter<MessagesRecycl
                 public void onInit(int i) {
                     if(i != TextToSpeech.ERROR)
                     {
-                        t.setLanguage(new Locale ("hi","IN", "variant"));
+                        t.setLanguage(new Locale ("hi","IN","variant"));
                     }
                 }
             });
