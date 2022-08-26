@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         ImageView eventbtn = (ImageView) findViewById(R.id.eventbtn);
         ImageView notificationbtn = (ImageView) findViewById(R.id.notificationbtn);
         ImageView userbtn = (ImageView) findViewById(R.id.userbtn);
-//       ImageView muktreelsbtn = (ImageView) findViewById(R.id.muktbtn);
+       ImageView muktreelsbtn = (ImageView) findViewById(R.id.mukt_reels);
         ImageView createpostbtn = (ImageView) findViewById(R.id.createpostbtn);
 
         FragmentManager m = getSupportFragmentManager();
@@ -155,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
 //                userbtn.setImageResource(R.drawable.user);
 //            }
 //        });
+
         dlg = new Dialog(MainActivity.this);
         dlg.setContentView(R.layout.dialog_chatbot);
         dlg.getWindow().setBackgroundDrawable(getDrawable(R.drawable.background_dialog));
@@ -183,6 +185,7 @@ public class MainActivity extends AppCompatActivity {
 //                btnSendMsgClicked(UserMessage,messages,recyclerView);
                 messagesRecyclerAdapter = new MessagesRecyclerAdapter(getApplicationContext(),messages);
                 recyclerView.setAdapter(messagesRecyclerAdapter);
+                recyclerView.scrollToPosition(messages.size() - 1);
 
                 Call<BotMessage> call = service.getStringScalar(new UserMessage(UserMessage));
                 call.enqueue(new Callback<BotMessage>() {
@@ -193,6 +196,7 @@ public class MainActivity extends AppCompatActivity {
                         messages.add(new Message(1,response.body().getReply(),false));
                         messagesRecyclerAdapter = new MessagesRecyclerAdapter(getApplicationContext(),messages);
                         recyclerView.setAdapter(messagesRecyclerAdapter);
+                        recyclerView.scrollToPosition(messages.size() - 1);
                     }
 
                     @Override
@@ -251,6 +255,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else if(menuItem.getItemId() == R.id.nav_gallery)
                 {
+                    Intent intent = new Intent(MainActivity.this, TrainingActivity.class);
+                    startActivity(intent);
                     Toast.makeText(getApplicationContext(),"Training and Management",Toast.LENGTH_SHORT).show();
                 }
                 else if(menuItem.getItemId() == R.id.nav_emergency)
@@ -262,6 +268,12 @@ public class MainActivity extends AppCompatActivity {
                    // Toast.makeText(getApplicationContext(),"Third",Toast.LENGTH_SHORT).show();
 
                 }
+
+                else if(menuItem.getItemId() == R.id.mukt_reels) {
+                    Intent intent = new Intent(MainActivity.this, Mukt_reels.class);
+                    startActivity(intent);
+                }
+
                 else if(menuItem.getItemId() == R.id.nav_book)
                 {
                     Toast.makeText(getApplicationContext(),"About Mukt",Toast.LENGTH_SHORT).show();
@@ -287,7 +299,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void btnSendMsgClicked(String msg, ArrayList<Message> Msgs,RecyclerView rcv){
+
+    private void btnSendMsgClicked(String msg, ArrayList<Message> Msgs, RecyclerView rcv){
 
 
 

@@ -19,9 +19,16 @@
 
 
         <item
+            android:id="@+id/mukt_reels"
+            android:icon="@drawable/usercolor"
+            android:title="Mukt Reels" />
+
+
+        <item
             android:id="@+id/nav_book"
             android:icon="@drawable/usercolor"
             android:title="About MuKT" />
+
 
 
     </group>
