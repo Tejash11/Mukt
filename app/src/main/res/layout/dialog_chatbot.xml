@@ -118,6 +118,7 @@
         </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:gravity="bottom"
             android:id="@+id/msgs_recycler"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -125,7 +126,7 @@
             android:layout_marginHorizontal="40dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="110dp"
-            android:orientation="vertical"/>
+            android:orientation="vertical" />
 
         <LinearLayout
             android:id="@+id/msg_input"
@@ -152,6 +153,7 @@
                 android:fontFamily="@font/poppins_medium"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/send_msg"
                 android:layout_width="match_parent"
                 android:layout_weight="4.2"
                 android:layout_height="wrap_content"

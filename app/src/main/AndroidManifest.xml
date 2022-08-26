@@ -19,7 +19,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Mukt" >
+        android:theme="@style/Theme.Mukt"
+        android:usesCleartextTraffic="true">
         <activity
             android:name=".TrainingActivity"
             android:exported="true" >
@@ -36,7 +37,6 @@
 
 <!--       <activity android:name=".Notification" />-->
 
->>>>>>> afcbdd5d93d8a39c3a4347fa4e7e82b4667c2820
         <activity
             android:name=".Mukt_reels"
             android:exported="false" />
