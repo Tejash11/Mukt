@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.mukt">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission
         android:name="android.permission.QUERY_ALL_PACKAGES"
         tools:ignore="QueryAllPackagesPermission" />
@@ -21,29 +21,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mukt">
         <activity
+            android:name=".Ticket_generator"
+            android:exported="false" />
+        <activity
             android:name=".AddJobActivity"
             android:exported="false" />
-        <activity android:name=".activity_applications" />
-
-<!--       <activity android:name=".Notification" />-->
-
+        <activity android:name=".activity_applications" /> <!-- <activity android:name=".Notification" /> -->
         <activity
             android:name=".Mukt_reels"
             android:exported="false" />
-
         <activity
             android:name=".Notification"
             android:exported="false"
             tools:ignore="Instantiatable" />
-
         <activity
             android:name=".event_section.event_create"
             android:exported="false" />
-
         <activity
             android:name=".event_section.event_view"
             android:exported="false" />
-
         <activity
             android:name=".FeaturedActivity"
             android:exported="false" />
@@ -77,42 +73,38 @@
             android:exported="false" />
         <activity
             android:name=".onboarding_splash.OnboardingScreen"
-            android:exported="true" >
+            android:exported="true">
 
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
 
         </activity>
         <activity
             android:name=".onboarding_splash.SplashScreen"
             android:exported="true">
-<!--             <intent-filter>-->
-<!--             <action android:name="android.intent.action.MAIN" />-->
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
 
-<!--             <category android:name="android.intent.category.LAUNCHER" />-->
-<!--             </intent-filter>-->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".CreatePost"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <meta-data

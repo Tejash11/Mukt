@@ -71,4 +71,10 @@ dependencies {
 
     implementation 'androidx.navigation:navigation-fragment:2.3.5'
     implementation 'androidx.navigation:navigation-ui:2.3.5'
+
+    implementation 'com.journeyapps:zxing-android-embedded:4.3.0'
+//    implementation 'com.journeyapps:zxing-android-embedded:2.3.0@aar'
+//    implementation 'com.journeyapps:zxing-android-legacy:2.3.0@aar'
+//    implementation 'com.journeyapps:zxing-android-integration:2.3.0@aar'
+    implementation 'com.google.zxing:core:3.2.1'
 }

@@ -27,16 +27,17 @@ public class Mukt_reels extends AppCompatActivity {
         videoList = new ArrayList<>();
         viewPager2 = findViewById(R.id.viewpager2);
 
+        // 3 4 7 9 10
         videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video3, "", ""));
-        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video5, "", ""));
-        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video1, "", ""));
-        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video10, "", ""));
-        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video2, "", ""));
-        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video8, "", ""));
         videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video4, "", ""));
-        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video6, "", ""));
         videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video7, "", ""));
         videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video9, "", ""));
+        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video10, "", ""));
+//        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video8, "", ""));
+//        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video4, "", ""));
+//        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video6, "", ""));
+//        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video7, "", ""));
+//        videoList.add(new Video("android.resource://" + getPackageName() + "/" + R.raw.video9, "", ""));
 
         videoAdapter = new VideoAdapter(videoList);
         viewPager2.setAdapter(videoAdapter);
