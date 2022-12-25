@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/user"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/add"
+            android:title="Training and Management" />
+        <item
+            android:id="@+id/nav_emergency"
+            android:icon="@drawable/event_icon"
+            android:title="@string/menu_slideshow" />
+
+
+        <item
+            android:id="@+id/mukt_reels"
+            android:icon="@drawable/usercolor"
+            android:title="Mukt Reels" />
+
+
+        <item
+            android:id="@+id/nav_book"
+            android:icon="@drawable/usercolor"
+            android:title="About MuKT" />
+
+
+
+    </group>
+</menu>

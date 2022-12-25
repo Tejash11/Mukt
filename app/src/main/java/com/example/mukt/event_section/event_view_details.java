@@ -1,5 +1,6 @@
 package com.example.mukt.event_section;
 
+import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
@@ -15,6 +16,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.mukt.R;
+import com.example.mukt.Ticket_generator;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
@@ -44,6 +46,8 @@ public class event_view_details extends Fragment {
 
     ImageView img;
     TextView name, date, time, venue, address, type, doc;
+    TextView book_btn;
+
 
 
 
@@ -92,6 +96,10 @@ public class event_view_details extends Fragment {
         doc = (TextView) v.findViewById(R.id.event_doc_view);
         img = (ImageView) v.findViewById(R.id.event_img_view);
 
+        book_btn = (TextView) v.findViewById(R.id.view_meta);
+
+
+
         Bundle b = this.getArguments();
         assert b != null;
         String event_name = b.getString("event_name");
@@ -129,6 +137,21 @@ public class event_view_details extends Fragment {
                 });
 
 
+
+        book_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent i = new Intent(getContext(), Ticket_generator.class);
+                i.putExtra("name", name.getText().toString());
+                i.putExtra("date", date.getText().toString());
+                startActivity(i);
+
+
+
+
+            }
+        });
 
 
 

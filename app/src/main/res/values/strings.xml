@@ -3,4 +3,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="nav_header_desc">Navigation Header</string>
+    <string name="menu_home">Applications</string>
+    <string name="menu_gallery">Profile</string>
+    <string name="menu_slideshow">Organize Event</string>
 </resources>
